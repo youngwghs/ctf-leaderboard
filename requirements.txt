@@ -4,6 +4,7 @@ distlib==0.3.4
 Django==4.0.2
 environ==1.0
 filelock==3.6.0
+gunicorn==20.1.0
 platformdirs==2.5.1
 pycodestyle==2.8.0
 PyMySQL==1.0.2
