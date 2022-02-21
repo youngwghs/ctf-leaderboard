@@ -2,7 +2,6 @@
 
 {% block content %}
 {% if content|length == 0 %}
-<h1>Welcome to WG CTF!</h1>
 {% else %}
 {% for c in content %}{{ c | safe }}{% endfor %}
 {% endif %}
