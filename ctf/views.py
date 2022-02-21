@@ -39,7 +39,7 @@ def submit(request):
 
     return render(request, "submit.html", context={
         "form": form,
-        "custom_title": CUSTOM_TITLE
+        "custom_title": "WG CTF"
     })
 
 
