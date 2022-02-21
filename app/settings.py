@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-import environ
+#import environ
 import os
 from pathlib import Path
 import django_heroku
@@ -28,8 +28,8 @@ MESSAGE_TAGS = {
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Take environment variables from .env file
-env = environ.FileAwareEnv()
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+#env = environ.FileAwareEnv()
+#environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
