@@ -39,7 +39,7 @@ SECRET_KEY = 'WeBsTeR2022!!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # False if not in os.environ because of casting above
-DEBUG = env('DEBUG', cast=bool, default=False)
+DEBUG = env('DEBUG', cast=bool, default=True)
 
 ALLOWED_HOSTS = env('ALLOWED_HOSTS', cast=list,
                     default=['localhost', '127.0.0.1', 'wgctf.herokuapp.com'])
@@ -153,7 +153,7 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 
 # Default primary key field type
