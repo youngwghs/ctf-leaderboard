@@ -40,7 +40,7 @@ SECRET_KEY = 'WeBsTeR2022!!'
 # False if not in os.environ because of casting above
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'wgctf.herokuapp.com'])
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'wgctf.herokuapp.com']
 
 
 
