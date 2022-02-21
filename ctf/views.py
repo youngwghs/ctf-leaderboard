@@ -9,9 +9,7 @@ from ctf.models import Content, Flag, Participant, Submission
 def index(request):
     content = Content.objects.all()
     return render(request, "index.html", context={
-        "content": content,
-        "custom_title": CUSTOM_TITLE
-    })
+        "content": content})
 
 
 def submit(request):
