@@ -6,6 +6,7 @@ django-environ==0.8.1
 filelock==3.6.0
 gunicorn==20.1.0
 platformdirs==2.5.1
+psycopg2-binary==2.9.3
 pycodestyle==2.8.0
 PyMySQL==1.0.2
 six==1.16.0
