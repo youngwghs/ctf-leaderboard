@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-#import environ
+import django-environ
 import os
 from pathlib import Path
 import django_heroku
