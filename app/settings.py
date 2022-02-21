@@ -39,12 +39,10 @@ SECRET_KEY = 'WeBsTeR2022!!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # False if not in os.environ because of casting above
-DEBUG = env('DEBUG', cast=bool, default=True)
+DEBUG = True
 
-ALLOWED_HOSTS = env('ALLOWED_HOSTS', cast=list,
-                    default=['localhost', '127.0.0.1', 'wgctf.herokuapp.com'])
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'wgctf.herokuapp.com'])
 
-CUSTOM_TITLE = env('CUSTOM_TITLE', cast=str, default='CTF Leaderboard')
 
 
 # Application definition
@@ -69,7 +67,6 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -102,17 +99,13 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if env.str('DATABASE_URL', default=''):
-    DATABASES = {
-        'default': env.db(),
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+}
 
 
 # Password validation
