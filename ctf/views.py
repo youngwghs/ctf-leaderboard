@@ -4,7 +4,6 @@ from django.shortcuts import render
 from django.http.response import HttpResponseRedirect
 from ctf.forms import SubmissionForm
 from ctf.models import Content, Flag, Participant, Submission
-from app.settings import CUSTOM_TITLE, env
 
 
 def index(request):
