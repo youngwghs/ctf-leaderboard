@@ -106,8 +106,12 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'ddjango.db.backends.postgresql_psycopg2',
+        'NAME': 'my_db',
+        'USER': 'mark',
+        'password': 'Voice2020&&',
+        'host': 'localhost',
+        'port': '5432',
     }
 }
 
