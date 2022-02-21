@@ -72,7 +72,7 @@ def board(request):
         "participants": participants,
         "my_participant_name": my_participant_name,
         "table_entries": table_entries,
-        "refreshInMs": env("REFRESH_IN_S", cast=int, default=30) * 1000,
+        "refreshInMs": "REFRESH_IN_S", cast=int, default=30 * 1000,
         "custom_title": CUSTOM_TITLE
     }
 
