@@ -32,7 +32,7 @@
               {% if user.is_authenticated %}
                 <p align="center" style="color: darkorange;"><a href="{% url 'logout' %}"><img src="{% static 'admin/img/logoutbtn.png' %}"></a></p>
               {% else %}
-              <center><a href="{% provider_login_url 'google' %}"><img src="{% static 'admin/img/btnlogin.png' %}"></a></center>
+              <center><a href="{% provider_login_url 'google' %}"><img src="{% static 'admin/img/loginbtn.png' %}"></a></center>
               {% endif %}
             </ul>
     
