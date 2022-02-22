@@ -4,10 +4,7 @@
 {% load socialaccount %}
 
 {% block content %}
-{% if content|length == 0 %}
-{% else %}
-{% for c in content %}{{ c | safe }}{% endfor %}
-{% endif %}
+
 <main>
     <div class="container py-4">
       <header class="pb-3 mb-4 border-bottom">
