@@ -15,6 +15,7 @@
         <td>{{ table_entry.display_name }}</td>
         {% for flag in table_entry.flags %}<td{% if flag.time %} title="{{ flag.datetime }}" {% endif %}>{{ flag.time }}
             </td>{% endfor %}
+            <td>Total Pts.</td>
     </tr>
     {% endfor %}
 </table>
