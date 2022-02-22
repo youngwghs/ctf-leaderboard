@@ -17,6 +17,8 @@ def index(request):
     return render(request, "index.html", context={
         "content": content})
 
+def profile(request):
+    return render(request, "profile.html", context={})
 
 def submit(request):
     if request.method == "POST":

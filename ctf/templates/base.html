@@ -36,10 +36,10 @@
     
             <div class="dropdown text-end">
               <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="{%static 'admin/img/wglogo.png'%}" alt="mdo" width="32"  >
+                <img src="{%static 'admin/img/wglogo.png'%}" alt="mdo" width="32"  >{{ request.user.first_name }}
               </a>
               <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
                 <li><hr class="dropdown-divider"></li>
                 {% if user.is_authenticated %}
                     <li><a class="dropdown-item" href="{% url 'logout' %}">Sign Out</a></li>
