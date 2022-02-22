@@ -56,12 +56,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'ctf.apps.CtfConfig',
-    #'allauth',
-    #'allauth.account',
-    #'allauth.socialaccount',
-    #'allauth.socialaccount.providers.google',
-    #'crispy_forms',
-    #'crispy_bootstrap5',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+    'crispy_forms',
+    'crispy_bootstrap5',
     'app'
 ]
 
