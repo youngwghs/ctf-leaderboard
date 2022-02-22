@@ -30,7 +30,7 @@
               <li><a href="{% url 'board' %}" class="nav-link px-2 link-secondary">Scoreboard</a></li>
               <li><a href="{% url 'submit' %}" class="nav-link px-2 link-secondary">Submit Flag</a></li>
               {% if user.is_authenticated %}
-                <p align="center" style="color: darkorange;"><a href="{% url 'logout' %}"><img src="{% static 'admin/img/logoutbtn.png' %}"></a></p>
+                <p align="center" style="color: darkorange;"><a href="#"><img src="{% static 'admin/img/logoutbtn.png' %}"></a></p>
               {% else %}
               <center><a href="{% provider_login_url 'google' %}"><img src="{% static 'admin/img/btnlogin.png' %}"></a></center>
               {% endif %}
