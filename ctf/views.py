@@ -4,7 +4,13 @@ from django.shortcuts import render
 from django.http.response import HttpResponseRedirect
 from ctf.forms import SubmissionForm
 from ctf.models import Content, Flag, Participant, Submission
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import user_passes_test
+import datetime
+from django.contrib.auth.models import User
 
+def is_staff_user(user):
+    return user.is_staff
 
 def index(request):
     content = Content.objects.all()
