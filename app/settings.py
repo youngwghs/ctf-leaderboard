@@ -166,7 +166,7 @@ django_heroku.settings(locals())
 MEDIA_URL = '/img/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'staticfiles')
+    os.path.join(BASE_DIR, 'static')
 ]
 
 AUTHENTICATION_BACKENDS = [
