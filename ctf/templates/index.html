@@ -32,18 +32,26 @@
         <div class="col-md-6">
           <div class="h-100 p-5 text-white bg-dark rounded-3">
             <h2>Upcoming Prize</h2>
-            <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
-            <button class="btn btn-outline-light" type="button">Example button</button>
+            <p>1st Place Winner will receive a custom GitHub Username 2.0 T-Shirt!</p>
+            <br><img src="https://cdn.shopify.com/s/files/1/0051/4802/products/TShirt_GitHub_Username_Unisex_CoolBlue_1_882x882.jpg?v=1629732698" width="50%">
+            <button class="btn btn-outline-light" type="button">See Prize</button>
           </div>
         </div>
         <div class="col-md-6">
           <div class="h-100 p-5 bg-light border rounded-3">
             <h2>Enroll In Cybersecurity Today!</h2>
             <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-            <button class="btn btn-outline-secondary" type="button">Example button</button>
+            <button class="btn btn-outline-secondary" type="button" onclick="github()">Example button</button>
           </div>
         </div>
       </div>
+
+      <script>
+          function github()
+            {
+                location.href="{% url 'https://thegithubshop.com/collections/shirts/products/username-2-0-shirt?variant=39562302914669' %}"
+            }
+      </script>
   
   
 {% endblock %}
