@@ -187,7 +187,7 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-#SITE_ID = 2
+SITE_ID = 1
 
 
 LOGIN_REDIRECT_URL = 'board'

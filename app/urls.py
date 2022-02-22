@@ -22,5 +22,4 @@ from django.conf import settings
 urlpatterns = [
     path('', include('ctf.urls')),
     path('admin/', admin.site.urls),
-    path('logout/', logout, {'next_page': settings.LOGOUT_REDIRECT_URL}, name='logout'),
 ]
