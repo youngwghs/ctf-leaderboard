@@ -29,11 +29,7 @@
               <li><a href="{% url 'index' %}" class="nav-link px-2 link-secondary">Home</a></li>
               <li><a href="{% url 'board' %}" class="nav-link px-2 link-secondary">Scoreboard</a></li>
               <li><a href="{% url 'submit' %}" class="nav-link px-2 link-secondary">Submit Flag</a></li>
-              {% if user.is_authenticated %}
-                <p align="center" style="color: darkorange;"><a href="{% url 'logout' %}"><img src="{% static 'admin/img/logoutbtn.png' %}"></a></p>
-              {% else %}
-              <center><a href="{% provider_login_url 'google' %}"><img src="{% static 'admin/img/loginbtn.png' %}"></a></center>
-              {% endif %}
+              
             </ul>
     
             
@@ -45,7 +41,11 @@
               <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
                 <li><a class="dropdown-item" href="#">Profile</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                {% if user.is_authenticated %}
+                    <li><a class="dropdown-item" href="{% url 'logout' %}">Sign Out</a></li>
+                {% else %}
+                    <li><a class="dropdown-item" href="{% provider_login_url 'google' %}">Sign In</a></li>
+              {% endif %}
               </ul>
             </div>
           </div>
