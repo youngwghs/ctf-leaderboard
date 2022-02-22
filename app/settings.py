@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'ctf.apps.CtfConfig',
     'allauth',
     'allauth.account',
@@ -185,6 +186,9 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
+
+SITE_ID = 2
+
 
 LOGIN_REDIRECT_URL = 'board'
 LOGOUT_REDIRECT_URL = 'index'

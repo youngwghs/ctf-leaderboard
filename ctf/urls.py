@@ -10,7 +10,7 @@ urlpatterns = [
     path("board", views.board, name="board"),
     #path('accounts/profile/', profile, name='profile'),
     path('accounts/', include('allauth.urls')),
-    path('accounts/', include('django.contrib.auth.urls')), # new
+    #path('accounts/', include('django.contrib.auth.urls')), # new
     path('logout', LogoutView.as_view()),
 
 ]
