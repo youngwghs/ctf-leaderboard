@@ -75,7 +75,7 @@ def board(request):
             })
         
         table_entries.append(entry)
-    count = Submission.objects.count()
+        count = Submission.objects.filter(participant=participant).count()
 
     context = {
         "flags": flags,
