@@ -16,7 +16,7 @@
         <td>{{ table_entry.display_name }}</td>
         {% for flag in table_entry.flags %}<td{% if flag.time %} title="{{ flag.datetime }}" {% endif %}>{{ flag.time }}
             </td>{% endfor %}
-            <td></td>
+            <td style="background-color: #ff742f";></td>
     </tr>
     {% endfor %}
 </table>
