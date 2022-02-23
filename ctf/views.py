@@ -79,7 +79,7 @@ def board(request):
 
         table_entries.append(entry)
 
-    count = submissions.objects.all().annotate(num_flags=Count('flags'))
+    count = Submissions.objects.all().annotate(num_flags=Count('flags'))
 
     context = {
         "flags": flags,
