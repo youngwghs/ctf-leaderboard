@@ -16,12 +16,12 @@
         <td>{{ table_entry.display_name }}</td>
         {% for flag in table_entry.flags %}<td{% if flag.time %} title="{{ flag.datetime }}" {% endif %}>{{ flag.time }}
             </td>{% endfor %}
-            <td style="background-color: #ff742f; font-size: larger; font-weight: bold;text-align: center;">{{ table_entry.count }}</td>
+            <td style="background-color: #ff742f; font-size: larger; font-weight: bold;text-align: center;">{{ flag.count }}</td>
     </tr>
     {% endfor %}
 </table>
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    <a class="btn button-color" href="{% url 'submit' %}" role="button">Submit flag</a>
+    <a class="btn btn-success" href="{% url 'submit' %}" role="button">Submit flag</a>
 </div>
 <script>setTimeout(() => { window.location.reload(1); }, 10000);</script>
 {% endblock %}
