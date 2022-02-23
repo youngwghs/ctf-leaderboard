@@ -66,15 +66,16 @@ def board(request):
         entry = {"name": participant.name}
         entry["display_name"] = f"{participant.name}: {participant.custom_name}" if participant.custom_name else participant.name
         entry["flags"] = []
+        count =0
         for flag in flags:
             submission = Submission.objects.filter(
                 flag=flag, participant=participant).first()
             entry["flags"].append({
                 "datetime": "" if not submission else submission.created_at.strftime('%d.%m.%Y %H:%M:%S'),
                 "time": "" if not submission else f"{submission.created_at.strftime('%H:%M')} 🚩",
-            count = count + 1    
             })
-        
+            count = count + 1    
+
         table_entries.append(entry)
 
     context = {
