@@ -72,10 +72,10 @@ def board(request):
             entry["flags"].append({
                 "datetime": "" if not submission else submission.created_at.strftime('%d.%m.%Y %H:%M:%S'),
                 "time": "" if not submission else f"{submission.created_at.strftime('%H:%M')} 🚩",
+            count = count + 1    
             })
         
         table_entries.append(entry)
-        count = Submission.objects.filter(participant=participant).count()
 
     context = {
         "flags": flags,
