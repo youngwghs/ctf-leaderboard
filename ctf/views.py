@@ -69,14 +69,13 @@ def board(request):
         for flag in flags:
             submission = Submission.objects.filter(
                 flag=flag, participant=participant).first()
-            count =  Submission.objects.filter(flag=flag, participant=participant).count()
             entry["flags"].append({
                 "datetime": "" if not submission else submission.created_at.strftime('%d.%m.%Y %H:%M:%S'),
                 "time": "" if not submission else f"{submission.created_at.strftime('%H:%M')} 🚩",
             })
 
         table_entries.append(entry)
-
+    count = Submission.objects.filter(flag=flag, participant=participant).count()
     context = {
         "flags": flags,
         "participants": participants,
