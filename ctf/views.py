@@ -20,6 +20,9 @@ def index(request):
 def profile(request):
     return render(request, "profile.html", context={})
 
+def challenges(request):
+    return render(request, "challenges.html", context={})
+
 def submit(request):
     if request.method == "POST":
         if not request.session.session_key:

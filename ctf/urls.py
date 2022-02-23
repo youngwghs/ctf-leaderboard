@@ -9,6 +9,7 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path("", views.index, name="index"),
     path("profile/", views.profile, name="profile"),
+    path("challenges/", views.challenges, name="challenges"),
     path("submit", views.submit, name="submit"),
     path("board", views.board, name="board"),
     #path('accounts/profile/', profile, name='profile'),
