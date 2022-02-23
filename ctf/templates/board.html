@@ -17,7 +17,7 @@
             </td>
             
         {% endfor %}
-        {% if table.entry | length == 5 %}
+        {% if table.entries | length >= 5 %}
            <Td>Finished!</Td>
         {% else %}
         {% endif %}
