@@ -80,7 +80,6 @@ def board(request):
 
         table_entries.append(entry)
 
-    count = Submission.objects.all().annotate(num_flags=Count('flag'))
 
     context = {
         "flags": flags,
@@ -88,8 +87,7 @@ def board(request):
         "my_participant_name": my_participant_name,
         "table_entries": table_entries,
         #"refreshInMs": ("REFRESH_IN_S", cast=int, default=30) * 1000,
-        "custom_title": "WG CTF",
-        'count':count
+        "custom_title": "WG CTF"
         
     }
 
