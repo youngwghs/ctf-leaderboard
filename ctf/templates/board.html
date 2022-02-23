@@ -18,7 +18,7 @@
             </td>
             
         {% endfor %}
-        <td style="background-color: #ff742f; font-size: larger; font-weight: bold;text-align: center;">{{ flags | length }}</td>
+        <td style="background-color: #ff742f; font-size: larger; font-weight: bold;text-align: center;">{% if table_entry.name == my_participant_name %}{{ table_entry.flags | length }}{% endif %}</td>
     </tr>
     {% endfor %}
 </table>
