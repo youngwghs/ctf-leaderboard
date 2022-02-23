@@ -78,7 +78,7 @@ def board(request):
             })
 
         table_entries.append(entry)
-
+     
     context = {
         "flags": flags,
         "participants": participants,
