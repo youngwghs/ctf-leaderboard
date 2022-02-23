@@ -13,7 +13,7 @@
     {% if table_entry.name == my_participant_name %}<tr class="table-secondary">{% else %}
     <tr>{% endif %}
         <td>{{ table_entry.display_name }}</td>
-        {% for flag in table_entry.flags %}<td>{% if flag.time %} title="{{ flag.datetime }}" {% endif %}{{ flag.time }}
+        {% for flag in table_entry.flags %}<td>{% if flag.time %} {{ flag.datetime }} {% endif %}{{ flag.time }}
             </td>
             
         {% endfor %}
