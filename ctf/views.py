@@ -82,8 +82,8 @@ def board(request):
         "my_participant_name": my_participant_name,
         "table_entries": table_entries,
         #"refreshInMs": ("REFRESH_IN_S", cast=int, default=30) * 1000,
-        "custom_title": "WG CTF",
-        "count":count
+        "custom_title": "WG CTF"
+        
     }
 
     return render(request, "board.html", context=context)
