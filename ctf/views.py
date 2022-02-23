@@ -73,6 +73,7 @@ def board(request):
                 "datetime": "" if not submission else submission.created_at.strftime('%d.%m.%Y %H:%M:%S'),
                 "time": "" if not submission else f"{submission.created_at.strftime('%H:%M')} 🚩",
             })
+            count = Submission.objects.filter(flag=flag, participant=participant).count()
         table_entries.append(entry)
 
     context = {
@@ -81,7 +82,8 @@ def board(request):
         "my_participant_name": my_participant_name,
         "table_entries": table_entries,
         #"refreshInMs": ("REFRESH_IN_S", cast=int, default=30) * 1000,
-        "custom_title": "WG CTF"
+        "custom_title": "WG CTF",
+        "count":count
     }
 
     return render(request, "board.html", context=context)
