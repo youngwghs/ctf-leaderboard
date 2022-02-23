@@ -15,8 +15,9 @@
     <tr>{% endif %}
         <td>{{ table_entry.display_name }}</td>
         {% for flag in table_entry.flags %}<td{% if flag.time %} title="{{ flag.datetime }}" {% endif %}>{{ flag.time }}
-            </td>{% endfor %}
+            </td>
             <td style="background-color: #ff742f; font-size: larger; font-weight: bold;text-align: center;">{% len(table_entry.flags) %}</td>
+        {% endfor %}
     </tr>
     {% endfor %}
 </table>
