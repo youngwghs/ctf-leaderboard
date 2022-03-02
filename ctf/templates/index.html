@@ -24,7 +24,7 @@
         <div class="container-fluid py-5">
           <h1 class="display-5 fw-bold">Upcoming CTF Competition!</h1>
           <p class="col-md-8 fs-4">Click below to reveal this competition's challenges! Note: these challenges will not be revealed until the advertised date.</p>
-          <button class="btn btn-primary btn-lg" type="button" onclick="challenges()">Let's Go!</button>
+          {% if user.is_authenticated %}<button class="btn btn-primary btn-lg" type="button" onclick="challenges()">Let's Go!</button>{% endif %}
         </div>
       </div>
   
