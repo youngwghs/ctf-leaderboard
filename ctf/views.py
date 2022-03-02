@@ -24,6 +24,9 @@ def profile(request):
 def challenges(request):
     return render(request, "challenges.html", context={})
 
+def ules(request):
+    return render(request, "rules.html", context={})
+
 def submit(request):
     if request.method == "POST":
         if not request.session.session_key:

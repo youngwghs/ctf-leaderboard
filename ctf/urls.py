@@ -12,6 +12,8 @@ urlpatterns = [
     path("challenges/", views.challenges, name="challenges"),
     path("submit", views.submit, name="submit"),
     path("board", views.board, name="board"),
+    path("rules", views.rules, name="rules"),
+
     #path('accounts/profile/', profile, name='profile'),
     path('accounts/', include('allauth.urls')),
     #path('accounts/', include('django.contrib.auth.urls')), # new
