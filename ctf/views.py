@@ -24,7 +24,7 @@ def profile(request):
 def challenges(request):
     return render(request, "challenges.html", context={})
 
-def ules(request):
+def rules(request):
     return render(request, "rules.html", context={})
 
 def submit(request):
