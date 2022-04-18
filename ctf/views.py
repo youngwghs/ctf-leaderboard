@@ -21,7 +21,7 @@ def index(request):
 def profile(request):
     return render(request, "profile.html", context={})
 
-@user_passes_test(is_staff_user)
+@user_passes_test(lambda u: u.groups.filter(name='teacher').exists())
 def challenges(request):
     return render(request, "challenges.html", context={})
 
