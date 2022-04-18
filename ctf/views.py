@@ -21,6 +21,7 @@ def index(request):
 def profile(request):
     return render(request, "profile.html", context={})
 
+@user_passes_test(is_staff_user)
 def challenges(request):
     return render(request, "challenges.html", context={})
 
