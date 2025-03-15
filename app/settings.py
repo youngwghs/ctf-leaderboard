@@ -40,7 +40,7 @@ SECRET_KEY = '...'
 # SECURITY WARNING: don't run with debug turned on in production!
 # False if not in os.environ because of casting above
 DEBUG = True
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'wgctf.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'wghsctf.herokuapp.com']
 
 
 
@@ -106,12 +106,8 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'my_db',
-        'USER': 'mark',
-        'password': 'Voice2020&&',
-        'host': 'localhost',
-        'port': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',  # Database engine
+        'NAME': BASE_DIR / 'db.sqlite3',  # Path to the database file
     }
 }
 
